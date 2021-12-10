@@ -8,14 +8,6 @@ class dataHandler
   private $dbName;
   private $dbCharset;
 
-  // function __construct()
-  // {
-  //   $this->dbServerName = "Localhost";
-  //   $this->dbUserName = "root";
-  //   $this->dbPassword = "";
-  //   $this->dbName = "scandiweb";
-  //
-  // }
 
   public function connect()
   {
