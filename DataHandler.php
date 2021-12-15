@@ -15,7 +15,7 @@ class dataHandler
     $this->dbServerName = "Localhost";
     $this->dbUserName = "root";
     $this->dbPassword = "";
-    $this->dbName = "scandiweb";
+    $this->dbName = "testDB";
     $this->dbCharset = "utf8mb4";
 
 
