@@ -7,6 +7,7 @@ class dataHandler
   private $dbPassword;
   private $dbName;
   private $dbCharset;
+  private $pdo;
 
 
   public function connect()
@@ -21,17 +22,28 @@ class dataHandler
 
     try {
       $dsn = "mysql:host=".$this->dbServerName.";dbname=".$this->dbName.";charset=".$this->dbCharset;
-      $pdo = new PDO($dsn,$this->dbUserName,$this->dbPassword);
+      $this->pdo = new PDO($dsn,$this->dbUserName,$this->dbPassword);
 
-      $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+      $this->pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-      return $pdo;
+      return $this->pdo;
 
     } catch (PDOException $e) {
       echo "Connection failled: ".$e->getMessage();
+    }
+  }
 
+  public function writeData($querry){
+    try {
+      $this->pdo->exec($querry);
+    } catch (PDOException $e) {
+        echo "Write function failled: ".$e->getMessage();
     }
 
+
+  }
+  public function ReadData($querry)
+  {
   }
 }
 

@@ -1,3 +1,6 @@
+<?php
+$request = $_SERVER['REQUEST_URI'];
+ ?>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">ScandiWeb Test</a>
@@ -7,11 +10,10 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="">List</a>
+          <a class="nav-link" href="<?php $ ?>/list">List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Add</a>
-
+          <a class="nav-link" href="<?php $root ?>/add">Add</a>
         </li>
 
 
