@@ -1,18 +1,15 @@
 <?php
 /*includes*/
-include('DataHandler.php');
+include("DataHandler.php");
 require("Classes/DvDClass.php");
 require("Classes/BookClass.php");
 require("Classes/FurnitureClass.php");
 
 $conn = new dataHandler();
 $conn->connect();
-session_start();
-$session['contentVar'] = "Partials/add.php";
-
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html public>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
@@ -22,19 +19,20 @@ $session['contentVar'] = "Partials/add.php";
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/Style.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
-  <title></title>
+  <title>ScandiWeb</title>
 </head>
 <body>
   <?php include('Partials/Header.php');?>
   <div class="container content">
     <?php
-
+    $request = $_SERVER['REQUEST_URI'];
+    
     switch ($request) {
         case '/' :
             require __DIR__ . '/views/list.php';
             break;
         case '/add' :
-            require __DIR__ . '/views/add.php';
+        	require __DIR__ . '/views/add.php';
             break;
         case '/list' :
             require __DIR__ . '/views/list.php';

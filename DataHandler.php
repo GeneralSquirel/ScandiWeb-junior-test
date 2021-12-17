@@ -12,10 +12,10 @@ class dataHandler
 
   public function connect()
   {
-    $this->dbServerName = "Localhost";
-    $this->dbUserName = "root";
-    $this->dbPassword = "";
-    $this->dbName = "scandiweb";
+    $this->dbServerName = "localhost";
+    $this->dbUserName = "s145392_scandiweb";
+    $this->dbPassword = "A8zblPLBxT";
+    $this->dbName = "s145392_scandiweb";
     $this->dbCharset = "utf8mb4";
 
 
