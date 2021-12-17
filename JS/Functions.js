@@ -67,14 +67,11 @@ switch(selecter.value) {
   bookInput.style.display = "none";
   furnituresInput.style.display = "none";
   dvdInput.style.display = "block";
-  title.innerHTML = "Add a DvD";
+  title.innerHTML = "Add a movie";
   break;
   default:
   break;
 }
 }
 
-score.addEventListener("change", () => {
-  console.log(score);
-
-});
+CreateAllert("security score:",score);
